@@ -2,7 +2,7 @@ const app = require('express')();
 const mongoose = require('mongoose');
 
 //Setup DB
-mongoose.connect("mongodb://mongo:27017");
+const db = mongoose.connect("mongodb://mongo:27017");
 
 
 app.get('/', (req, res) => {
