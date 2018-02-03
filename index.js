@@ -1,4 +1,8 @@
 const app = require('express')();
+const mongoose = require('mongoose');
+
+//Setup DB
+mongoose.connect("mongodb://mongo:27017");
 
 
 app.get('/', (req, res) => {
@@ -6,6 +10,8 @@ app.get('/', (req, res) => {
 });
 
 
-const server = app.listen(3000);
+const server = app.listen(3000, () => {
+	console.log("app is listening on port 3000!")
+});
 
 
